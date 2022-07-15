@@ -2,13 +2,16 @@ import React from 'react'
 import './Header.css'
 import {GrSearch} from 'react-icons/gr'
 import {MdShoppingBasket} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
     <div className='header'>
+      <Link to="/">
     <img 
     className='header__logo'
     src='http://pngimg.com/uploads/amazon/amazon_PNG11.png' alt=''></img>
+    </Link>
     <div className='header__search'>
         <input className='header__searchInput' type='text'></input>
         <GrSearch className='header__searchIcon'/>
@@ -26,10 +29,12 @@ const Header = () => {
         <span className='header__optionLineOne'>Your </span>
             <span className='header__optionLineTwo'>Prime</span>
         </div>
+        <Link to="/checkout">
         <div className='header__optionBasket'>
         <MdShoppingBasket/>
         <span className='header__optionLineTwo  header__basketCount'>0</span>
         </div>
+        </Link>
     </div>
     </div>
   )
