@@ -37,7 +37,7 @@ const Header = () => {
         </div>
         <Link to="/checkout">
           <div className="header__optionBasket">
-            <MdShoppingBasket onClick={ ()=> history.push("/checkout")}/>
+            <MdShoppingBasket className="header__optionBasketicon" onClick={ ()=> history.push("/checkout")}/>
             <span className="header__optionLineTwo  header__basketCount">
               {basket?.length}
             </span>
