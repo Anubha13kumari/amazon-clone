@@ -3,6 +3,7 @@ import './Checkout.css'
 import Subtotal from './Subtotal'
 
 function Checkout() {
+  console.log("checkout render")
   return (
     <div className='checkout'>
     <div className='checkout__left'>
