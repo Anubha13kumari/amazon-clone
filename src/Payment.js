@@ -46,26 +46,29 @@ function Payment() {
     event.preventDefault();
     setProcessing(true);
 
+  
+
     const payload = await stripe
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
         },
       })
-      // .then(( paymentIntent ) => {
-      //   // paymentIntent = payment confirmation
+    //   .then(( paymentIntent ) => {
+    //     // paymentIntent = payment confirmation
         
-      //  console.log(paymentIntent);
-      //   db
-      //   .collection('users')
-      //   .doc(user?.uid)
-      //   .collection('orders')
-      //   .doc(paymentIntent.id)
-      //   .set({
-      //       basket: basket,
-      //       amount: paymentIntent.amount,
-      //       created: paymentIntent.created
-      //   })
+    //    console.log(paymentIntent);
+    //     db
+    //     .collection('users')
+    //     .doc(user?.uid)
+    //     .collection('orders')
+    //     .doc(paymentIntent.id)
+    //     .set({
+    //         basket: basket,
+    //         amount: paymentIntent.amount,
+    //         created: paymentIntent.created
+    //     })
+
 
       .then(({ id, amount, created, error }) => {
         if(error) {
