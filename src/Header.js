@@ -8,6 +8,7 @@ import { auth } from "firebase";
 
 const Header = () => {
   const [{ basket ,user}, dispatch] = useStateValue();
+  console.log("basket: ",basket);
   const history = useHistory();
 
   const handleAuthentication= () => {
